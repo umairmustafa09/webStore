@@ -1,0 +1,190 @@
+body{
+    background-color: lightgrey;
+    font-family: sans-serif;
+}
+.topHeading{
+    margin: 30px 5px 0px 5px;
+}
+.topHeading > h1{
+    margin-bottom: 0px;
+}
+.topHeading > p{
+    margin-top: 0px;
+    margin-left: 100px;   
+}
+.navContainer > ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.listLength{
+    height: 50px;
+    background-color: black;
+}
+.navContainer > ul > li{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.navContainer > ul  > li >  a{
+    text-decoration: none;
+    display: block; 
+    color: white;
+    padding: 13px 25px;
+}
+.navContainer > ul > li > a:hover{
+    background-color: grey;
+}
+.navContainer{
+    margin-bottom: -16px;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 1;
+    opacity: 0.6;
+}
+.navContainer > ul > li > button > img{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+.navContainer > ul > li > button{
+    border: none;
+    background-color: black;
+    width: 80px;
+    height: 100%;
+    outline: none;
+}
+.midContainerHome{
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: teal;
+    width: 33%;
+    height: 450px;
+    /* border: 1px solid black;     */
+    position: relative;
+}.midContainerContentHome{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    /* background-color: grey;  */
+}
+.midContainerContentHome > a > img{
+    height: 50%;
+    width: 100%;
+}
+.midContainerContentHome > a > p{
+    color: white;
+    font-size: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: serif;
+}
+.midContainerContentHome > a > h5{
+    color: white;
+}
+.midContainerContentHome > a{
+    text-decoration: none;
+}
+.midContainerHome:hover{
+    transform: scale(1.025); 
+}
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.midContainer{
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: teal;
+    width: 25%;
+    height: 800px;  
+    position: relative;
+}.midContainerContent{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    /* background-color: grey;  */
+}
+.midContainerContent >  img{
+    height: 50%;
+    width: 100%;
+}
+.midContainerContent >  p{
+    color: white;
+    font-size: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: serif;
+}
+.midContainerContent > h5{
+    margin-top: 30px;
+    color: white;
+}
+.midContainerContent > a{
+    text-decoration: none;
+}
+.midContainer:hover{
+    transform: scale(1.03); 
+}
+.midContainer button{
+    display: none;
+}
+.midContainer:hover button{
+    display: inline-block;
+}
+.navContainer > ul > li > button > img{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+.navContainer > ul > li > button{
+    border: none;
+    background-color: black;
+    width: 80px;
+    height: 100%;
+    outline: none;
+}
+.stickyCard{
+    position: fixed;
+    text-align: center;
+    opacity: 0.9;
+    bottom: 0;
+    width: 100%;
+}
+.modelBox{
+    display: none;
+    background-color: rgba(0,0,0,0.7);;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding-top: 100px;
+}
+.modelBoxContent{
+    margin: auto;
+    background-color: white;
+    opacity: 0.8;
+    width: 90%;
+    overflow: scroll;
+    height: 60%;
+    z-index: 1;
+}
+.modelBoxContent > p > img{
+    width: 100px;
+    height: 80px;
+}
+.modelBoxContent > p{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+}
+.modelBoxContent > h1{
+    text-align: center;
+}
