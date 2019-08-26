@@ -1,0 +1,11 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding: 10px;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: grey;
+}
+button:focus{
+    outline: none;
+}
+
