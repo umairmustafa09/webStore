@@ -1,6 +1,7 @@
 //golbal variable and array declaration.
 
 let count = 0; 
+let itemPurchase = [{}];
 let itemArray = []; 
 let itemName = []; 
 let itemPrice = [];  
@@ -13,6 +14,7 @@ function addToCart(item, price, thing, imageName){
     //local variable
     let eachItemCount = 0;
     //adding item value to array.
+    itemPurchase.push( { "item": item, "price": price, "things": thing, "imageName": imageName} );
     itemArray[count] =  thing; //golbal variable
     itemPrice[count] = price; //golbal variable
     itemName[count] = item; //golbal variable
@@ -133,6 +135,8 @@ function showModelBox(){
         }
     }    
     sight = document.getElementById("modelContent").innerHTML += '<p>' + 'Total Price = ' + totalPrice.toLocaleString() + ' Rs' +'</p>' + "<br>";
+    itemPurchase.shift();
+    console.log( itemPurchase );
 }
 
 

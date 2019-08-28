@@ -7,22 +7,41 @@
         <script src="../javaScript/hideShow.js"></script> 
         <script src="../javaScript/purchase.js"></script> 
         <script src="../javaScript/slideShow.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="topHeading">
             <h1>PakStore</h1>
             <p>All your shopping needs are here!</p>
         </div>
-        <div class="navContainer">
-            <ul class="row">
-                <li class="col-12 col-sm-12 d-lg-none d-md-none listLength" onclick="hideShowHam()"><button><img src="../images/ham.jpg"/></button></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow1"><a href="./home.html">Home</a></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow2"><a href="#">About</a></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow3"><a href="#" onclick="return mobileNav();">Mobile</a></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow4" ><a href="#" onclick="return tabletNav();">Tablet</a></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow5"><a href="#" onclick="return laptopNav();">Laptop</a></li>
-                <li class="col-lg-2 col-md-2 d-none d-sm-none d-md-block listLength" id="hideShow6"><a href="#">Contact US</a></li>  
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+            <button class="navbar-toggler"  data-toggle="collapse" data-target="#collapse-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-toggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./mobile.html">Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tablet.html">Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./laptop.html">Laptop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         </div>
         <div class = "slideShow" id = "slideShow">
             <span class = "fade" id = "slide1">
