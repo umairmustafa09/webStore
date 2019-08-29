@@ -1,7 +1,7 @@
 //golbal variable and array declaration.
 let count = 0; 
 let itemPurchase = [{}];
-let totalPrice = 0;  
+let eachItemCountArray = [];
 
 itemPurchase.shift();
 
@@ -36,10 +36,8 @@ function deleteButton(item, price, thing, imageName){
             itemPurchase.splice(i, 1);
             break;
         }    
-        //searching if any selecting item is present or not
     }    
     for(let i = 0; i < itemPurchase.length; i++){
-        // console.log( thing , itemPurchase[i].thing )
         if(thing == itemPurchase[i].thing){
             eachItemCount++;
         }
@@ -62,12 +60,15 @@ function deleteButton(item, price, thing, imageName){
     counter();
 }
 function counter(){
-    let count = 0; // local variable.
-    // if(count >= 0){
-    //     count++;
-    // }
-    // return count;
+    let count = 0, eachItemCount = 0; // local variable.
     for(let i = 0; i < itemPurchase.length; i++){
+        for(let j = 0; j < itemPurchase.length; j++){
+            if(itemPurchase[i].item == itemPurchase[j].item){
+                 eachItemCount++;
+            }
+        }
+        eachItemCountArray[i] = eachItemCount;
+        eachItemCount = 0;
         if(itemPurchase[i].item != ""){
             count++;
         }
@@ -75,48 +76,33 @@ function counter(){
     let sight = document.getElementById("stickyCard");
     count != 0 ? sight.style.display = "block" : sight.style.display = "none";
     document.getElementById("stickyCard").innerHTML = count + " " +"Item added to Cart " + "Click to view!";
+
+    return count;
 }
 
 
 //Show model box and model box content function.
 function showModelBox(){
-    //local variable.
-    let eachItemCount = 0;
-    let itemValue = "";
+    // local variable.
+    let itemValue = "", totalPrice = 0;
 
     //displaying model box.
     let sight = document.getElementById("modelBox");
     sight.style.display = "block";
 
-    //counting each number of item.
-    for(let i = 0; i < itemArray.length; i++){
-        for(let j = 0; j < itemArray.length; j++){
-            if(itemArray[i] == itemArray[j]){
-                 eachItemCount++;
-            }
-        }
-        eachItemCountArray[i] = eachItemCount;
-        eachItemCount = 0;
-    }
-
-    let tempCount = (counter() - 1); // counter function 
-    count--; //golable variable.
-
-
     //deleting model box Content in case if user change the cart value.
-    sight = document.getElementById("modelContent").innerHTML = "<h1>Item Added to cart " + '<span class="badge badge-success">' + tempCount + "</span>" + "</h1>";
+    sight = document.getElementById("modelContent").innerHTML = "<h1>Item Added to cart " + '<span class="badge badge-success">' + counter() + "</span>" + "</h1>";
 
 
     //displating how many item Add to cart.
-    for(let i = 0; i < itemName.length; i++){
-        if(itemName[i] != undefined && itemArray[i] != itemValue){
-            sight = document.getElementById("modelContent").innerHTML += '<p>'  + ' <span class="badge badge-success">' +  eachItemCountArray[i] +  'x' +'</span>' + '<img src = "../images/' + image[i] + '" ' +  'alt = "HP_Notebook_245_G7">' +  itemName[i] + ' ' +  itemPrice[i] + "Rs" + '</p>' + "<br>";
-            totalPrice = totalPrice + (+(itemPrice[i]) * eachItemCountArray[i]); //golbal variable
-            itemValue = itemArray[i];
+    for(let i = 0; i < itemPurchase.length; i++){
+        if(itemPurchase[i].item != undefined && itemPurchase[i].item != itemValue){
+            sight = document.getElementById("modelContent").innerHTML += '<p>'  + ' <span class="badge badge-success">' +  eachItemCountArray[i] +  'x' +'</span>' + '<img src = "../images/' + itemPurchase[i].imageName + '" ' +  'alt = "HP_Notebook_245_G7">' +  itemPurchase[i].item + ' ' +  itemPurchase[i].price + "Rs" + '</p>' + "<br>";
+            totalPrice = totalPrice + (+(itemPurchase[i].price) * eachItemCountArray[i]); //golbal variable
+            itemValue = itemPurchase[i].item;
         }
     }    
     sight = document.getElementById("modelContent").innerHTML += '<p>' + 'Total Price = ' + totalPrice.toLocaleString() + ' Rs' +'</p>' + "<br>";
-    console.log( itemPurchase );
 }
 
 
