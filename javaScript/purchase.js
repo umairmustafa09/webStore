@@ -1,99 +1,80 @@
 //golbal variable and array declaration.
-
 let count = 0; 
 let itemPurchase = [{}];
-let itemArray = []; 
-let itemName = []; 
-let itemPrice = [];  
-let image = [];   
-let eachItemCountArray = [];  
 let totalPrice = 0;  
+
+itemPurchase.shift();
 
 //Add to Cart Function.
 function addToCart(item, price, thing, imageName){
     //local variable
     let eachItemCount = 0;
     //adding item value to array.
-    itemPurchase.push( { "item": item, "price": price, "things": thing, "imageName": imageName} );
-    itemArray[count] =  thing; //golbal variable
-    itemPrice[count] = price; //golbal variable
-    itemName[count] = item; //golbal variable
-    image[count] = imageName;  //golbal variable
-    //checking if any item in present in array or not.
-    for(let i = 0; i < itemArray.length; i++){
-        if(thing == itemArray[i]){
+    itemPurchase.push( { "item": item, "price": price, "thing": thing, "imageName": imageName} );
+    for(let i = 0; i < itemPurchase.length; i++){
+        if(item == itemPurchase[i].item)
             eachItemCount++;
-        }    
     }  
     //changing state of Add to Cart button.
     if(eachItemCount != 0){
         itemAddedToCart = thing + "Cart"; //golable variable and concatinating string for id.
         document.getElementById(itemAddedToCart).innerHTML = eachItemCount + " +";
     } 
-    //sticky div to display block.
-    document.getElementById("stickyCard").innerHTML = counter() + " " +"Item added to Cart " + "Click to view!";  
-    let sight = document.getElementById("stickyCard");
-    sight.style.display = "block";
-    //displaying delete button 
-    sight = document.getElementById(thing);
+    //calling counter function.
+    counter();
+    sight = document.getElementById(thing); //change this ///////
     sight.style.display = "inline-block";
 }
 
-
-
-
 //Delete Item from Cart Function Function.
 function deleteButton(item, price, thing, imageName){
-    //local variable
+    //local variable.
     let eachItemCount = 0;
-     //delete item and price one by one from array
-    for(let i = 0; i < itemArray.length; i++){
-        if(thing == itemArray[i] && price == itemPrice[i]){
-            delete(itemArray[i]); //golbal variable
-            delete(itemPrice[i]); //golbal variable
-            delete(itemName[i]); //golbal variable
-            delete(image[i]); //golbal variable
+    //delete item and price one by one from array.
+    for(let i = 0; i < itemPurchase.length; i++){
+        if(thing == itemPurchase[i].thing && price == itemPurchase[i].price){
+            itemPurchase.splice(i, 1);
             break;
         }    
+        //searching if any selecting item is present or not
     }    
-    //searching if any selecting item is present or not
-    for(let i = 0; i < itemArray.length; i++){
-        if(thing == itemArray[i]){
+    for(let i = 0; i < itemPurchase.length; i++){
+        // console.log( thing , itemPurchase[i].thing )
+        if(thing == itemPurchase[i].thing){
             eachItemCount++;
         }
-        //changing state of Add to Cart button.
-        if(eachItemCount == 0){
-            itemAddedToCart = thing + "Cart"; //golable variable and concatinating string for id.
-            document.getElementById(itemAddedToCart).innerHTML = "Add to Cart";    
-        }
-        else{
-            itemAddedToCart = thing + "Cart"; //golable variable and concatinating string for id.
-            document.getElementById(itemAddedToCart).innerHTML = eachItemCount + " +";
-        }    
     }  
-    
+    //changing state of Add to Cart button.
+    if(eachItemCount == 0){
+        itemAddedToCart = thing + "Cart"; //golable variable and concatinating string for id.
+        document.getElementById(itemAddedToCart).innerHTML = "Add to Cart";    
+    }
+    else{
+        itemAddedToCart = thing + "Cart"; //golable variable and concatinating string for id.
+        document.getElementById(itemAddedToCart).innerHTML = eachItemCount + " +";
+    }    
     //removing delete button  
     if(eachItemCount == 0){
         let sight = document.getElementById(thing);
         sight.style.display = "none";
     }    
-    //Changing state of sticy Element.
-    if(count > 0){
-        document.getElementById("stickyCard").innerHTML = (counter() - 2) + " " +"Item added to Cart " + "Click to view!";
-        count = count - 2;
-    }   
-    if(count == 0){
-        sight = document.getElementById("stickyCard");
-        sight.style.display = "none";
-    }
-    //returning count
-    return count;
+    //calling counter function.
+    counter();
 }
 function counter(){
-    if(count >= 0){
-        count++;
+    let count = 0; // local variable.
+    // if(count >= 0){
+    //     count++;
+    // }
+    // return count;
+    for(let i = 0; i < itemPurchase.length; i++){
+        if(itemPurchase[i].item != ""){
+            count++;
+        }
     }
-    return count;
+    let sight = document.getElementById("stickyCard");
+    count != 0 ? sight.style.display = "block" : sight.style.display = "none";
+    document.getElementById("stickyCard").innerHTML = count + " " +"Item added to Cart " + "Click to view!";
 }
 
 
@@ -135,7 +116,6 @@ function showModelBox(){
         }
     }    
     sight = document.getElementById("modelContent").innerHTML += '<p>' + 'Total Price = ' + totalPrice.toLocaleString() + ' Rs' +'</p>' + "<br>";
-    itemPurchase.shift();
     console.log( itemPurchase );
 }
 
