@@ -1,25 +1,50 @@
 let canvas = document.getElementById( "canvas" );
 let ctx = canvas.getContext( "2d" );
 
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+let x = [], y = [];
+let count = 0, localCount = 0;
 
-let x = Math.round( canvas.width / 2 ), y = Math.round( canvas.height / 2 );
-let count = 0;
+setInterval( clear, 20 );
 
-setInterval( position, 1000 );
+function clear(){
+    for(let i = localCount + 1; i < count; i++){
+        ctx.fillStyle = "black" ;
+        ctx.beginPath();
+        if( localCount === 1 ){
+            ctx.arc( x[ 0 ], y[ 0 ], 22, 0, 2*Math.PI );
+            ctx.arc( x[ i ], y[ i ], 22, 0, 2*Math.PI );
+        }
+        else{
+            ctx.arc( x[ i ], y[ i ], 22, 0, 2*Math.PI );
+        }
+        ctx.stroke();
+        ctx.fill();
+        localCount = i;
+        break;
+    }
+}
 
+//canvas background.
 function display(){
-    ctx.clearRect( 0, 0, canvas.width, canvas.height );
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
     ctx.fillStyle = "black" ;
     ctx.fillRect( 0, 0, canvas.width, canvas.height );
-    ctx.fillStyle = "white";
-    ctx.fillRect( x,y, 100, 100 );
 }
 
-function position(){
-     //caluculating x and y axis.
-    count <= 10 ? y = y + count : count = 0;
+canvas.onmousemove = function position( event ){
+    x[ count ] = event.clientX, y[ count ] = event.clientY;
+    ctx.fillStyle = "grey";
+    ctx.beginPath();
+    ctx.arc( x[ count ], y[ count ], 22, 0, 2*Math.PI );
+    ctx.stroke();
+    ctx.fill();
+    ctx.fillStyle = "black" ;
+    ctx.beginPath();
+    ctx.arc( x[ count ], y[ count ], 20, 0, 2*Math.PI );
+    ctx.stroke();
+    ctx.fill();
     count++;
-    display();
+    // display(); //calling display functin again incase of resizing of browser.
 }
+display();

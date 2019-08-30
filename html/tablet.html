@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>PakStore</title>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="../css/home.css" />
+        <script src="../javaScript/purchase.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="topHeading">
+            <h1>PakStore</h1>
+            <p>All your shopping needs are here!</p>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+            <button class="navbar-toggler"  data-toggle="collapse" data-target="#collapse-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-toggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./mobile.html">Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tablet.html">Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./laptop.html">Laptop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="modelBox" id="modelBox">
+            <div class="modelBoxContent" id="modelContent">
+            </div>
+        </div>
+        </div>
+        <!--Tablet-->
+        <div>
+            <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/iPadPro.jpg" alt="iPad_Pro">
+                            <h5>11" iPad Pro</h5>
+                            <p>11" iPad Pro (64GB, Wi-Fi only, with FaceTime 2019) - Space Gray.</p>
+                            <h6><mark>Rs. 128,000</mark></h6>
+                            <button class="btn btn-success m-2" onClick="addToCart('11&quot iPad Pro' ,'128000' , 'iPad_Pro', 'iPadPro.jpg')" id="iPad_ProCart">Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "iPad_Pro" style="display: none;" onClick="deleteButton('11&quot iPad Pro' ,'128000' , 'iPad_Pro', 'iPadPro.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/samsungGlaxyTabS2.jpg" alt="Samsung_Galaxy_Tab_S2_8.0">
+                            <h5>Samsung Galaxy Tab S2 8.0</h5>
+                            <p>Samsung Galaxy Tab S2 8.0 WiFi 3/32Gb Complete Box.</p>
+                            <h6><mark>Rs. 31,999</mark></h6>
+                            <button class="btn btn-success m-2" onClick="addToCart('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0' , 'samsungGlaxyTabS2.jpg')" id='Samsung_Galaxy_Tab_S2_8.0Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Samsung_Galaxy_Tab_S2_8.0" style="display: none;" onClick="deleteButton('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0', 'samsungGlaxyTabS2.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/GalaxyTabE.jpg" alt="Galaxy_Tab_E-T560">
+                            <h5>Galaxy Tab E - T560</h5>
+                            <p>Galaxy Tab E - T560 - 9.6 Inch - 1.5GB RAM - 8GB ROM - Wifi - White.</p>
+                            <h6><mark>Rs. 22,499</mark></h6>
+                            <p><s>Rs. 25,000</s> -10%</p>
+                            <button class="btn btn-success m-2" onClick="addToCart('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560', 'GalaxyTabE.jpg')" id='Galaxy_Tab_E-T560Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Galaxy_Tab_E-T560" style="display: none;" onClick="deleteButton('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560',' GalaxyTabE.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../imageS/KindlePaperwhite.jpg" alt="Kindle_Paperwhite_(10th Gen.)">
+                            <h5>Kindle Paperwhite (10th Gen.)</h5>
+                            <p>Kindle Paperwhite (10th Gen.) 6 Touch Display, 300 PPI with Built-in Light, 8GB, Waterproof, WiFi.</p>
+                            <h6><mark>Rs. 26,950</mark></h6>
+                            <p><s>Rs. 27,500</s> -2%</p>
+                            <button class="btn btn-success m-2" onClick="addToCart('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)' ,'KindlePaperwhite.jpg')" id='Kindle_Paperwhite_(10th Gen.)Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Kindle_Paperwhite_(10th Gen.)" style="display: none;" onClick="deleteButton('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)', 'KindlePaperwhite.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/iPadPro.jpg" alt="iPad_Pro">
+                            <h5>11" iPad Pro</h5>
+                            <p>11" iPad Pro (64GB, Wi-Fi only, with FaceTime 2019) - Space Gray.</p>
+                            <h6><mark>Rs. 128,000</mark></h6>
+                            <button class="btn btn-success m-2" onClick="addToCart('11&quot iPad Pro' ,'128000' , 'iPad_Pro-1', 'iPadPro.jpg')" id="iPad_Pro-1Cart">Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "iPad_Pro-1" style="display: none;" onClick="deleteButton('11&quot iPad Pro' ,'128000' , 'iPad_Pro-1', 'iPadPro.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/samsungGlaxyTabS2.jpg" alt="Samsung_Galaxy_Tab_S2_8.0">
+                            <h5>Samsung Galaxy Tab S2 8.0</h5>
+                            <p>Samsung Galaxy Tab S2 8.0 WiFi 3/32Gb Complete Box.</p>
+                            <h6><mark>Rs. 31,999</mark></h6>
+                            <button class="btn btn-success m-2" onClick="addToCart('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0-1' , 'samsungGlaxyTabS2.jpg')" id='Samsung_Galaxy_Tab_S2_8.0-1Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Samsung_Galaxy_Tab_S2_8.0-1" style="display: none;" onClick="deleteButton('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0-1', 'samsungGlaxyTabS2.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../images/GalaxyTabE.jpg" alt="Galaxy_Tab_E-T560">
+                            <h5>Galaxy Tab E - T560</h5>
+                            <p>Galaxy Tab E - T560 - 9.6 Inch - 1.5GB RAM - 8GB ROM - Wifi - White.</p>
+                            <h6><mark>Rs. 22,499</mark></h6>
+                            <p><s>Rs. 25,000</s> -10%</p>
+                            <button class="btn btn-success m-2" onClick="addToCart('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560-1', 'GalaxyTabE.jpg')" id='Galaxy_Tab_E-T560-1Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Galaxy_Tab_E-T560-1" style="display: none;" onClick="deleteButton('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560-1',' GalaxyTabE.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                        <div class="midContainerContent">
+                            <img src="../imageS/KindlePaperwhite.jpg" alt="Kindle_Paperwhite_(10th Gen.)">
+                            <h5>Kindle Paperwhite (10th Gen.)</h5>
+                            <p>Kindle Paperwhite (10th Gen.) 6 Touch Display, 300 PPI with Built-in Light, 8GB, Waterproof, WiFi.</p>
+                            <h6><mark>Rs. 26,950</mark></h6>
+                            <p><s>Rs. 27,500</s> -2%</p>
+                            <button class="btn btn-success m-2" onClick="addToCart('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)-1' ,'KindlePaperwhite.jpg')" id='Kindle_Paperwhite_(10th Gen.)-1Cart'>Add to Cart</button>
+                            <button class="btn btn-danger m-1" id = "Kindle_Paperwhite_(10th Gen.)-1" style="display: none;" onClick="deleteButton('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)-1', 'KindlePaperwhite.jpg')">Delete Item</button>
+                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div>
+            <button class="btn btn-danger stickyCard" id ="stickyCard" style="display: none;" onClick="showModelBox()"></button>
+        </div>
+    </body>
+</html>

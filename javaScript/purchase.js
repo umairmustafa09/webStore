@@ -1,5 +1,4 @@
 //golbal variable and array declaration.
-let count = 0; 
 let itemPurchase = [{}];
 let eachItemCountArray = [];
 

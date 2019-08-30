@@ -1,0 +1,28 @@
+.body{
+    font-family: sans-serif;
+    color: white;
+}
+.container{
+    padding-right: 0px;
+    padding-left: 0px;
+    position: absolute;
+}
+.topHeading{
+
+    /* bottom: 100%; */
+    /* position: relative; */
+    /* margin: 30px 5px 0px 5px; */
+    z-index: -1;
+    color: white;
+}
+.topHeading > h1{
+    margin-bottom: 0px;
+}
+.topHeading > p{
+    margin-top: 0px;
+    margin-left: 100px;   
+}
+button{
+    z-index: -1;
+    /* top: -100%; */
+}

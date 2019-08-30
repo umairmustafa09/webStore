@@ -2,83 +2,39 @@
     <head>
         <title>PakStore</title>
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="../css/home.css" />
-        <script src="../javaScript/navBar.js"></script>
-        <script src="../javaScript/hideShow.js"></script> 
+        <link rel="stylesheet" href="../css/home1.css" />
         <script src="../javaScript/purchase.js"></script> 
-        <script src="../javaScript/slideShow.js"></script> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <div class="topHeading">
-            <h1>PakStore</h1>
-            <p>All your shopping needs are here!</p>
-        </div>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-            <button class="navbar-toggler"  data-toggle="collapse" data-target="#collapse-toggler">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapse-toggler">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./mobile.html">Mobile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./tablet.html">Tablet</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./laptop.html">Laptop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
+    <body onresize="display()">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+            <div class="topHeading">
+                <h1>PakStore</h1>
+                <p>All your shopping needs are here!</p>
             </div>
-        </nav>
+            <button class = "btn btn-primary">Shop now</button>
         </div>
-        <div class = "slideShow" id = "slideShow">
-            <span class = "fade" id = "slide1">
-                <img src="../images/laptop.jpg" alt="Laptop">
-            </span>
-            <span class = "fade" id = "slide2">
-                <img src="../images/tablet.jpg" alt="Tablet">
-            </span>
-            <span class = "fade" id = "slide3">
-                <img src="../images/smartPhone.jpg" alt="Smart Phone">
-            </span>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 midContainerHome" id="hideShowLaptopIcon">
+        <!-- <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-2 midContainerHome" id="hideShowLaptopIcon">
                 <div class="midContainerContentHome">
-                    <a onclick="return hideShowLaptop();">
+                    <a href="./laptop.html">
                     <img src="../images/laptop.jpg" alt="Laptop">
-                    <h5>Laptop</h5>
-                    <p>In laptop we have varitey of laptop like lenovo and  apple mac etc. from low budget laptop to high budget laptop.</p>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 midContainerHome" id="hideShowMobileICon">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-2 midContainerHome" id="hideShowMobileICon">
                 <div class="midContainerContentHome">
-                    <a onclick="return hideShowTablet();">
+                    <a href="./tablet.html">
                     <img src="../images/tablet.jpg" alt="Tablet">
-                    <h5>Tablet</h5>
-                    <p>In tablet we have varitey of tablet like samsung and ipad etc. from low budget tablet to high budget tablet.</p>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 col-12 midContainerHome" id="hideShowTabletIcon">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-2 midContainerHome" id="hideShowTabletIcon">
                 <div class="midContainerContentHome">
-                    <a onclick="return hideShowMobile();">
+                    <a href="./mobile.html">
                     <img src="../images/smartPhone.jpg" alt="Smart Phone">
-                    <h5>Smart phone</h5>
-                    <p>In smart phone we have varitey of smart phones like samsung and iphone  etc.from low budget smartphone to high budget smart phones.</p>
                     </a>
                 </div>
             </div>
@@ -87,300 +43,7 @@
             <div class="modelBoxContent" id="modelContent">
             </div>
         </div>
-        </div>
-        <!-- mobile container> -->
-        <div id="hideShowMobile" style="display: none;">
-            <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iphoneX.jpg" alt="iphoneX">
-                            <h5>Iphone X</h5>
-                            <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs.131,499</mark></h6>
-                            <p><s>Rs.174,999</s> -25%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , 'iphoneX', 'iphoneX.jpg')" id="iphoneXCart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneX" style="display: none;" onClick="deleteButton('Iphone X' , '131499' , 'iphoneX','iphoneX.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungA20.jpg" alt="samsungA20">
-                            <h5>Samsung Galaxy A20</h5>
-                            <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
-                            <h6><mark>Rs. 29,900</mark></h6>
-                            <p><s>Rs. 29,999</s> -0.3%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', 'samsungA20', 'samsungA20.jpg')" id="samsungA20Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsungA20" style="display: none;" onClick="deleteButton('Samsung Galaxy A20' , '29900', 'samsungA20', 'samsungA20.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
-                            <h5>Iphone XS</h5>
-                            <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs. 246,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','iphoneXS','IpnoneXS.jpg')" id='iphoneXSCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneXS" style="display: none;" onClick="deleteButton('Iphone XS', '246999','iphoneXS', 'IpnoneXS.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
-                            <h5>Samsung Galaxy A70</h5>
-                            <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
-                            <h6><mark>Rs. 61,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70', 'samsung-galaxy-a70.jpg')" id='samsung-galaxy-a70Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsung-galaxy-a70" style="display: none;" onClick="deleteButton('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70', 'samsung-galaxy-a70.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iphoneX.jpg" alt="iphoneX">
-                            <h5>Iphone X</h5>
-                            <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs.131,499</mark></h6>
-                            <p><s>Rs.174,999</s> -25%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , 'iphoneX-1', 'iphoneX.jpg')" id="iphoneX-1Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneX-1" style="display: none;" onClick="deleteButton('Iphone X' , '131499' , 'iphoneX','iphoneX-1.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungA20.jpg" alt="samsungA20">
-                            <h5>Samsung Galaxy A20</h5>
-                            <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
-                            <h6><mark>Rs. 29,900</mark></h6>
-                            <p><s>Rs. 29,999</s> -0.3%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', 'samsungA20-1', 'samsungA20.jpg')" id="samsungA20-1Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsungA20-1" style="display: none;" onClick="deleteButton('Samsung Galaxy A20' , '29900', 'samsungA20-1', 'samsungA20.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
-                            <h5>Iphone XS</h5>
-                            <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs. 246,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','iphoneXS-1','IpnoneXS.jpg')" id='iphoneXS-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneXS-1" style="display: none;" onClick="deleteButton('Iphone XS', '246999','iphoneXS-1', 'IpnoneXS.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
-                            <h5>Samsung Galaxy A70</h5>
-                            <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
-                            <h6><mark>Rs. 61,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70-1', 'samsung-galaxy-a70.jpg')" id='samsung-galaxy-a70-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsung-galaxy-a70-1" style="display: none;" onClick="deleteButton('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70-1', 'samsung-galaxy-a70.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <!--Laptop-->
-        <div id="hideShowLaptop" style="display: none;">
-            <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
-                            <h5>MacBook Pro with Touch Bar</h5>
-                            <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
-                            <h6><mark>Rs. 199,000</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar', 'MacBookProWithTouchBar.jpg')" id='MacBook_Pro_with_Touch_BarCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "MacBook_Pro_with_Touch_Bar" style="display: none;" onClick="deleteButton('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar', 'MacBookProWithTouchBar.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
-                            <h5>Lenovo Ideapad 330</h5>
-                            <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
-                            <h6><mark>Rs. 69,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330', 'LenovoIdeapad330.jpg')" id='Lenovo_Ideapad_330Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Lenovo_Ideapad_330" style="display: none;" onClick="deleteButton('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330', 'LenovoIdeapad330.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                           <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
-                            <h5>Acer Predato</h5>
-                            <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
-                            <h6><mark>Rs. 180,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', 'Acer_Predato', 'Acer Predato.jpg')" id='Acer_PredatoCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Acer_Predato" style="display: none;" onClick="deleteButton('Acer Predato', '180000', 'Acer_Predato', 'Acer Predato.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
-                            <h5>HP Notebook 245 G7</h5>
-                            <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
-                            <h6><mark>Rs. 58,999</mark></h6>
-                            <p><s>Rs.65,000</s> -9%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7', 'HPG7.png')" id='HP_Notebook_245_G7Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "HP_Notebook_245_G7" style="display: none;" onClick="deleteButton('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7', 'HPG7.png')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
-                            <h5>MacBook Pro with Touch Bar</h5>
-                            <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
-                            <h6><mark>Rs. 199,000</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar-1', 'MacBookProWithTouchBar.jpg')" id='MacBook_Pro_with_Touch_Bar-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "MacBook_Pro_with_Touch_Bar-1" style="display: none;" onClick="deleteButton('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar-1', 'MacBookProWithTouchBar.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
-                            <h5>Lenovo Ideapad 330</h5>
-                            <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
-                            <h6><mark>Rs. 69,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330-1', 'LenovoIdeapad330.jpg')" id='Lenovo_Ideapad_330-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Lenovo_Ideapad_330-1" style="display: none;" onClick="deleteButton('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330-1', 'LenovoIdeapad330.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                           <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
-                            <h5>Acer Predato</h5>
-                            <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
-                            <h6><mark>Rs. 180,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', 'Acer_Predato-1', 'Acer Predato.jpg')" id='Acer_Predato-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Acer_Predato-1" style="display: none;" onClick="deleteButton('Acer Predato', '180000', 'Acer_Predato-1', 'Acer Predato.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
-                            <h5>HP Notebook 245 G7</h5>
-                            <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
-                            <h6><mark>Rs. 58,999</mark></h6>
-                            <p><s>Rs.65,000</s> -9%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7-1', 'HPG7.png')" id='HP_Notebook_245_G7-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "HP_Notebook_245_G7-1" style="display: none;" onClick="deleteButton('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7-1', 'HPG7.png')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <!--Tablet-->
-        <div id="hideShowTablet" style="display: none;">
-            <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iPadPro.jpg" alt="iPad_Pro">
-                            <h5>11" iPad Pro</h5>
-                            <p>11" iPad Pro (64GB, Wi-Fi only, with FaceTime 2019) - Space Gray.</p>
-                            <h6><mark>Rs. 128,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('11&quot iPad Pro' ,'128000' , 'iPad_Pro', 'iPadPro.jpg')" id="iPad_ProCart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iPad_Pro" style="display: none;" onClick="deleteButton('11&quot iPad Pro' ,'128000' , 'iPad_Pro', 'iPadPro.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungGlaxyTabS2.jpg" alt="Samsung_Galaxy_Tab_S2_8.0">
-                            <h5>Samsung Galaxy Tab S2 8.0</h5>
-                            <p>Samsung Galaxy Tab S2 8.0 WiFi 3/32Gb Complete Box.</p>
-                            <h6><mark>Rs. 31,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0' , 'samsungGlaxyTabS2.jpg')" id='Samsung_Galaxy_Tab_S2_8.0Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Samsung_Galaxy_Tab_S2_8.0" style="display: none;" onClick="deleteButton('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0', 'samsungGlaxyTabS2.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/GalaxyTabE.jpg" alt="Galaxy_Tab_E-T560">
-                            <h5>Galaxy Tab E - T560</h5>
-                            <p>Galaxy Tab E - T560 - 9.6 Inch - 1.5GB RAM - 8GB ROM - Wifi - White.</p>
-                            <h6><mark>Rs. 22,499</mark></h6>
-                            <p><s>Rs. 25,000</s> -10%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560', 'GalaxyTabE.jpg')" id='Galaxy_Tab_E-T560Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Galaxy_Tab_E-T560" style="display: none;" onClick="deleteButton('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560',' GalaxyTabE.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../imageS/KindlePaperwhite.jpg" alt="Kindle_Paperwhite_(10th Gen.)">
-                            <h5>Kindle Paperwhite (10th Gen.)</h5>
-                            <p>Kindle Paperwhite (10th Gen.) 6 Touch Display, 300 PPI with Built-in Light, 8GB, Waterproof, WiFi.</p>
-                            <h6><mark>Rs. 26,950</mark></h6>
-                            <p><s>Rs. 27,500</s> -2%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)' ,'KindlePaperwhite.jpg')" id='Kindle_Paperwhite_(10th Gen.)Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Kindle_Paperwhite_(10th Gen.)" style="display: none;" onClick="deleteButton('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)', 'KindlePaperwhite.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iPadPro.jpg" alt="iPad_Pro">
-                            <h5>11" iPad Pro</h5>
-                            <p>11" iPad Pro (64GB, Wi-Fi only, with FaceTime 2019) - Space Gray.</p>
-                            <h6><mark>Rs. 128,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('11&quot iPad Pro' ,'128000' , 'iPad_Pro-1', 'iPadPro.jpg')" id="iPad_Pro-1Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iPad_Pro-1" style="display: none;" onClick="deleteButton('11&quot iPad Pro' ,'128000' , 'iPad_Pro-1', 'iPadPro.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungGlaxyTabS2.jpg" alt="Samsung_Galaxy_Tab_S2_8.0">
-                            <h5>Samsung Galaxy Tab S2 8.0</h5>
-                            <p>Samsung Galaxy Tab S2 8.0 WiFi 3/32Gb Complete Box.</p>
-                            <h6><mark>Rs. 31,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0-1' , 'samsungGlaxyTabS2.jpg')" id='Samsung_Galaxy_Tab_S2_8.0-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Samsung_Galaxy_Tab_S2_8.0-1" style="display: none;" onClick="deleteButton('Samsung Galaxy Tab S2 8.0', '31999' , 'Samsung_Galaxy_Tab_S2_8.0-1', 'samsungGlaxyTabS2.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/GalaxyTabE.jpg" alt="Galaxy_Tab_E-T560">
-                            <h5>Galaxy Tab E - T560</h5>
-                            <p>Galaxy Tab E - T560 - 9.6 Inch - 1.5GB RAM - 8GB ROM - Wifi - White.</p>
-                            <h6><mark>Rs. 22,499</mark></h6>
-                            <p><s>Rs. 25,000</s> -10%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560-1', 'GalaxyTabE.jpg')" id='Galaxy_Tab_E-T560-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Galaxy_Tab_E-T560-1" style="display: none;" onClick="deleteButton('Galaxy Tab E - T560' , '22499' , 'Galaxy_Tab_E-T560-1',' GalaxyTabE.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../imageS/KindlePaperwhite.jpg" alt="Kindle_Paperwhite_(10th Gen.)">
-                            <h5>Kindle Paperwhite (10th Gen.)</h5>
-                            <p>Kindle Paperwhite (10th Gen.) 6 Touch Display, 300 PPI with Built-in Light, 8GB, Waterproof, WiFi.</p>
-                            <h6><mark>Rs. 26,950</mark></h6>
-                            <p><s>Rs. 27,500</s> -2%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)-1' ,'KindlePaperwhite.jpg')" id='Kindle_Paperwhite_(10th Gen.)-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Kindle_Paperwhite_(10th Gen.)-1" style="display: none;" onClick="deleteButton('Kindle Paperwhite (10th Gen.)', '26950' , 'Kindle_Paperwhite_(10th Gen.)-1', 'KindlePaperwhite.jpg')">Delete Item</button>
-                            <button class="btn btn-primary" onClick ="showModelBox()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div>
-                <button class="btn btn-danger stickyCard" id ="stickyCard" style="display: none;" onClick="showModelBox()"></button>
-        </div>
-        <!-- <div class="footer">         
-        </div> -->
+    </div> -->
+    <script src="../javaScript/canvas.js"></script>
     </body>
 </html>
