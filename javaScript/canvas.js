@@ -4,7 +4,7 @@ let ctx = canvas.getContext( "2d" );
 let x = [], y = [];
 let count = 0, localCount = 0;
 
-setInterval( clear, 15 );
+setInterval( clear, 20 );
 
 function clear(){
     for(let i = localCount + 1; i < count; i++){
