@@ -3,7 +3,6 @@
         <title>PakStore</title>
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="../css/home.css" />
-        <script src="../javaScript/purchase.js"></script> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
@@ -47,94 +46,95 @@
         <!-- mobile container> -->
         <div>
             <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iphoneX.jpg" alt="iphoneX">
-                            <h5>Iphone X</h5>
-                            <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs.131,499</mark></h6>
-                            <p><s>Rs.174,999</s> -25%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , 'iphoneX', 'iphoneX.jpg')" id="iphoneXCart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneX" style="display: none;" onClick="deleteButton('Iphone X' , '131499' , 'iphoneX','iphoneX.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungA20.jpg" alt="samsungA20">
-                            <h5>Samsung Galaxy A20</h5>
-                            <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
-                            <h6><mark>Rs. 29,900</mark></h6>
-                            <p><s>Rs. 29,999</s> -0.3%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', 'samsungA20', 'samsungA20.jpg')" id="samsungA20Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsungA20" style="display: none;" onClick="deleteButton('Samsung Galaxy A20' , '29900', 'samsungA20', 'samsungA20.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
-                            <h5>Iphone XS</h5>
-                            <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs. 246,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','iphoneXS','IpnoneXS.jpg')" id='iphoneXSCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneXS" style="display: none;" onClick="deleteButton('Iphone XS', '246999','iphoneXS', 'IpnoneXS.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
-                            <h5>Samsung Galaxy A70</h5>
-                            <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
-                            <h6><mark>Rs. 61,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70', 'samsung-galaxy-a70.jpg')" id='samsung-galaxy-a70Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsung-galaxy-a70" style="display: none;" onClick="deleteButton('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70', 'samsung-galaxy-a70.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/iphoneX.jpg" alt="iphoneX">
-                            <h5>Iphone X</h5>
-                            <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs.131,499</mark></h6>
-                            <p><s>Rs.174,999</s> -25%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , 'iphoneX-1', 'iphoneX.jpg')" id="iphoneX-1Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneX-1" style="display: none;" onClick="deleteButton('Iphone X' , '131499' , 'iphoneX','iphoneX-1.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsungA20.jpg" alt="samsungA20">
-                            <h5>Samsung Galaxy A20</h5>
-                            <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
-                            <h6><mark>Rs. 29,900</mark></h6>
-                            <p><s>Rs. 29,999</s> -0.3%</p>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', 'samsungA20-1', 'samsungA20.jpg')" id="samsungA20-1Cart">Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsungA20-1" style="display: none;" onClick="deleteButton('Samsung Galaxy A20' , '29900', 'samsungA20-1', 'samsungA20.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
-                            <h5>Iphone XS</h5>
-                            <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
-                            <h6><mark>Rs. 246,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','iphoneXS-1','IpnoneXS.jpg')" id='iphoneXS-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "iphoneXS-1" style="display: none;" onClick="deleteButton('Iphone XS', '246999','iphoneXS-1', 'IpnoneXS.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
-                            <h5>Samsung Galaxy A70</h5>
-                            <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
-                            <h6><mark>Rs. 61,999</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70-1', 'samsung-galaxy-a70.jpg')" id='samsung-galaxy-a70-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "samsung-galaxy-a70-1" style="display: none;" onClick="deleteButton('Samsung Galaxy A70' , '61999', 'samsung-galaxy-a70-1', 'samsung-galaxy-a70.jpg')">Delete Item</button>
-                        </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/iphoneX.jpg" alt="iphoneX">
+                        <h5>Iphone X</h5>
+                        <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
+                        <h6><mark>Rs.131,499</mark></h6>
+                        <p><s>Rs.174,999</s> -25%</p>
+                        <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , '0001M', 'iphoneX.jpg')" id="0001M">Add to Cart </button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0001M')">Delete Item</button>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/samsungA20.jpg" alt="samsungA20">
+                        <h5>Samsung Galaxy A20</h5>
+                        <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
+                        <h6><mark>Rs. 29,900</mark></h6>
+                        <p><s>Rs. 29,999</s> -0.3%</p>
+                        <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', '0002M', 'samsungA20.jpg')" id="0002M">Add to Cart </button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0002M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
+                        <h5>Iphone XS</h5>
+                        <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
+                        <h6><mark>Rs. 246,999</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','0003M','IpnoneXS.jpg')" id='0003M'>Add to Cart </button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0003M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
+                        <h5>Samsung Galaxy A70</h5>
+                        <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
+                        <h6><mark>Rs. 61,999</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', '0004M', 'samsung-galaxy-a70.jpg')" id='0004M'>Add to Cart </button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0004M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/iphoneX.jpg" alt="iphoneX">
+                        <h5>Iphone X</h5>
+                        <p>Apple iPhone X Mobile Phone - 5.8" Notch Display - Face ID - Without Face-time.</p>
+                        <h6><mark>Rs.131,499</mark></h6>
+                        <p><s>Rs.174,999</s> -25%</p>
+                        <button class="btn btn-success m-1" onClick="addToCart('Iphone X' , '131499' , '0005M', 'iphoneX.jpg')" id="0005M">Add to Cart Cart</button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0005M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/samsungA20.jpg" alt="samsungA20">
+                        <h5>Samsung Galaxy A20</h5>
+                        <p>Samsung Galaxy A20 - 3GB RAM - 32GB ROM - 6.4 Inches Display - Dual Sim - Smartphone.</p>
+                        <h6><mark>Rs. 29,900</mark></h6>
+                        <p><s>Rs. 29,999</s> -0.3%</p>
+                        <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A20' , '29900', '0006M', 'samsungA20.jpg')" id="0006M">Add to Cart Cart</button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0006M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/IpnoneXS.jpg" alt="iphoneXS">
+                        <h5>Iphone XS</h5>
+                        <p>Apple iPhone XS Mobile Phone - 5.8" QHD+ Notch Display - Face ID - Without Face-time.</p>
+                        <h6><mark>Rs. 246,999</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('Iphone XS', '246999','0007M','IpnoneXS.jpg')" id='0007M'>Add to Cart Cart</button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0007M')">Delete Item</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/samsung-galaxy-a70.jpg" alt="samsung-galaxy-a70">
+                        <h5>Samsung Galaxy A70</h5>
+                        <p>Samsung Galaxy A70 Mobile Phone - 6.7" Display - 6GB RAM - 128 GB ROM - Fingerprint.</p>
+                        <h6><mark>Rs. 61,999</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('Samsung Galaxy A70' , '61999', '0008M', 'samsung-galaxy-a70.jpg')" id='0008M'>Add to Cart </button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0008M')">Delete Item</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div>
             <button class="btn btn-danger stickyCard" id ="stickyCard" style="display: none;" onClick="showModelBox()"></button>
         </div>
+        <script src="../javaScript/purchase.js"></script> 
     </body>
 </html>

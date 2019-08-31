@@ -4,7 +4,7 @@ let ctx = canvas.getContext( "2d" );
 let x = [], y = [];
 let count = 0, localCount = 0;
 
-setInterval( clear, 20 );
+setInterval( clear, 15 );
 
 function clear(){
     for(let i = localCount + 1; i < count; i++){
@@ -29,11 +29,6 @@ function display(){
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
     ctx.fillStyle = "rgb(39, 61, 80)" ;
-    ctx.fillRect( 0, 0, canvas.width, canvas.height );
-    ctx.fillStyle = "white" ;
-    ctx.font = "18px Arial";
-    ctx.fillText("Go to the market For Shopping, no way! just 'erase' that thought from mind also from screen now!.", 120, 130);
-    ctx.fillStyle = "grey" ;
     ctx.fillRect( 0, 0, canvas.width, canvas.height );
 }
 

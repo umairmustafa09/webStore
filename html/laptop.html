@@ -3,7 +3,6 @@
         <title>PakStore</title>
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="../css/home.css" />
-        <script src="../javaScript/purchase.js"></script> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
@@ -47,92 +46,92 @@
         <!--Laptop-->
         <div>
             <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
-                            <h5>MacBook Pro with Touch Bar</h5>
-                            <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
-                            <h6><mark>Rs. 199,000</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar', 'MacBookProWithTouchBar.jpg')" id='MacBook_Pro_with_Touch_BarCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "MacBook_Pro_with_Touch_Bar" style="display: none;" onClick="deleteButton('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar', 'MacBookProWithTouchBar.jpg')">Delete Item</button>
-                        </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
+                        <h5>MacBook Pro with Touch Bar</h5>
+                        <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
+                        <h6><mark>Rs. 199,000</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', '0001L', 'MacBookProWithTouchBar.jpg')" id='0001L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0001L')">Delete Item</button>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
-                            <h5>Lenovo Ideapad 330</h5>
-                            <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
-                            <h6><mark>Rs. 69,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330', 'LenovoIdeapad330.jpg')" id='Lenovo_Ideapad_330Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Lenovo_Ideapad_330" style="display: none;" onClick="deleteButton('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330', 'LenovoIdeapad330.jpg')">Delete Item</button>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
+                        <h5>Lenovo Ideapad 330</h5>
+                        <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
+                        <h6><mark>Rs. 69,999</mark></h6>
+                        <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , '0002L', 'LenovoIdeapad330.jpg')" id='0002L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0002L')">Delete Item</button>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                       <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
+                        <h5>Acer Predato</h5>
+                        <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
+                        <h6><mark>Rs. 180,000</mark></h6>
+                        <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', '0003L', 'Acer Predato.jpg')" id='0003L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0003L')">Delete Item</button>
                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
+                        <h5>HP Notebook 245 G7</h5>
+                        <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
+                        <h6><mark>Rs. 58,999</mark></h6>
+                        <p><s>Rs.65,000</s> -9%</p>
+                        <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , '0004L', 'HPG7.png')" id='0004L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0004L')">Delete Item</button>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                           <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
-                            <h5>Acer Predato</h5>
-                            <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
-                            <h6><mark>Rs. 180,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', 'Acer_Predato', 'Acer Predato.jpg')" id='Acer_PredatoCart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Acer_Predato" style="display: none;" onClick="deleteButton('Acer Predato', '180000', 'Acer_Predato', 'Acer Predato.jpg')">Delete Item</button>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
+                        <h5>MacBook Pro with Touch Bar</h5>
+                        <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
+                        <h6><mark>Rs. 199,000</mark></h6>
+                        <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', '0005L', 'MacBookProWithTouchBar.jpg')" id='0005L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0005L')">Delete Item</button>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
-                            <h5>HP Notebook 245 G7</h5>
-                            <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
-                            <h6><mark>Rs. 58,999</mark></h6>
-                            <p><s>Rs.65,000</s> -9%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7', 'HPG7.png')" id='HP_Notebook_245_G7Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "HP_Notebook_245_G7" style="display: none;" onClick="deleteButton('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7', 'HPG7.png')">Delete Item</button>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
+                        <h5>Lenovo Ideapad 330</h5>
+                        <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
+                        <h6><mark>Rs. 69,999</mark></h6>
+                        <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , '0006L', 'LenovoIdeapad330.jpg')" id='0006L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0006L')">Delete Item</button>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                       <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
+                        <h5>Acer Predato</h5>
+                        <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
+                        <h6><mark>Rs. 180,000</mark></h6>
+                        <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', '0007L', 'Acer Predato.jpg')" id='0007L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1" onClick="deleteButton('0007L')">Delete Item</button>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/MacBookProWithTouchBar.jpg" alt="MacBook_Pro_with_Touch_Bar">
-                            <h5>MacBook Pro with Touch Bar</h5>
-                            <p>13.3" MacBook Pro with Touch Bar - 256GB PCIe SSD - macOS Sierra - Space Grey.</p>
-                            <h6><mark>Rs. 199,000</mark></h6>
-                            <button class="btn btn-success m-1" onClick="addToCart('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar-1', 'MacBookProWithTouchBar.jpg')" id='MacBook_Pro_with_Touch_Bar-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "MacBook_Pro_with_Touch_Bar-1" style="display: none;" onClick="deleteButton('MacBook Pro with Touch Bar', '199000', 'MacBook_Pro_with_Touch_Bar-1', 'MacBookProWithTouchBar.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/LenovoIdeapad330.jpg" alt="Lenovo_Ideapad_330">
-                            <h5>Lenovo Ideapad 330</h5>
-                            <p>Lenovo Ideapad 330 - 15.6" HD Display - 8th Gen. Intel® Core™ i5-8250U - Intel® UHD 620 - FreeDOS 2.0.</p>
-                            <h6><mark>Rs. 69,999</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330-1', 'LenovoIdeapad330.jpg')" id='Lenovo_Ideapad_330-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Lenovo_Ideapad_330-1" style="display: none;" onClick="deleteButton('Lenovo Ideapad 330', '69999' , 'Lenovo_Ideapad_330-1', 'LenovoIdeapad330.jpg')">Delete Item</button>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                           <img src="../images/Acer Predato.jpg" alt="Acer_Predato">
-                            <h5>Acer Predato</h5>
-                            <p>Acer Predator Helios 300 Gaming Laptop, 15.6" Full HD IPS, Intel i7-7700HQ CPU, 16GB DDR4 RAM, 256GB SSD.</p>
-                            <h6><mark>Rs. 180,000</mark></h6>
-                            <button class="btn btn-success m-2" onClick="addToCart('Acer Predato', '180000', 'Acer_Predato-1', 'Acer Predato.jpg')" id='Acer_Predato-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "Acer_Predato-1" style="display: none;" onClick="deleteButton('Acer Predato', '180000', 'Acer_Predato-1', 'Acer Predato.jpg')">Delete Item</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
-                        <div class="midContainerContent">
-                            <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
-                            <h5>HP Notebook 245 G7</h5>
-                            <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
-                            <h6><mark>Rs. 58,999</mark></h6>
-                            <p><s>Rs.65,000</s> -9%</p>
-                            <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7-1', 'HPG7.png')" id='HP_Notebook_245_G7-1Cart'>Add to Cart</button>
-                            <button class="btn btn-danger m-1" id = "HP_Notebook_245_G7-1" style="display: none;" onClick="deleteButton('HP Notebook 245 G7', '58999' , 'HP_Notebook_245_G7-1', 'HPG7.png')">Delete Item</button>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 midContainer">
+                    <div class="midContainerContent">
+                        <img src="../images/HPG7.png" alt="HP_Notebook_245_G7">
+                        <h5>HP Notebook 245 G7</h5>
+                        <p>HP Notebook 245 G7 - 14" HD Display - AMD Ryzen™ 5. 2500u - 4GB DDR4 -1TB HDD.</p>
+                        <h6><mark>Rs. 58,999</mark></h6>
+                        <p><s>Rs.65,000</s> -9%</p>
+                        <button class="btn btn-success m-2" onClick="addToCart('HP Notebook 245 G7', '58999' , '0008L', 'HPG7.png')" id='0008L'>Add to Cart</button>
+                        <button class="btn btn-danger m-1"  onClick="deleteButton('0008L')">Delete Item</button>
                     </div>
                 </div>
         </div>
         <div>
             <button class="btn btn-danger stickyCard" id ="stickyCard" style="display: none;" onClick="showModelBox()"></button>
         </div>
+        <script src="../javaScript/purchase.js"></script> 
     </body>
 </html>
