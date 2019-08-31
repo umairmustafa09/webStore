@@ -102,7 +102,7 @@ body{
     height: 800px;  
     position: relative;
 }.midContainerContent{
-    box-shadow: 0 4px 4px 0 rgb(39, 61, 80);;
+    box-shadow: 0 4px 4px 0 rgb(39, 61, 80);
     width: 100%;
     height: 100%;
     color: white;
@@ -111,6 +111,7 @@ body{
     /* background-color: grey;  */
 }
 .midContainerContent >  img{
+    border-radius: 5%;
     height: 50%;
     width: 100%;
 }
