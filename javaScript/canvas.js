@@ -7,6 +7,7 @@ let count = 0, localCount = 0;
 setInterval( clear, 20 );
 
 function clear(){
+    art();
     for(let i = localCount + 1; i < count; i++){
         ctx.beginPath();
         if( localCount === 1 ){
@@ -16,6 +17,7 @@ function clear(){
         else{
             ctx.arc( x[ i ], y[ i ], 22, 0, 2*Math.PI );
         }
+        ctx.fillStyle = "rgb(39, 61, 80)";
         ctx.strokeStyle = "rgb(39, 61, 80)";
         ctx.stroke();
         ctx.fill();
@@ -26,13 +28,16 @@ function clear(){
 
 //canvas background.
 function display(){
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight + scrollY;
+    canvas.width = window.innerWidth + scrollX;
     ctx.fillStyle = "rgb(39, 61, 80)" ;
-    ctx.fillRect( 0, 0, canvas.width, canvas.height );
+    ctx.fillRect( 0, 0, canvas.width, canvas.height);
+    document.getElementById( "btn" ).style.left = canvas.width - 100;
+    art();
 }
 
 canvas.onmousemove = function position( event ){
+    art();
     x[ count ] = event.clientX, y[ count ] = event.clientY;
     ctx.fillStyle = "grey";
     ctx.beginPath();
@@ -46,6 +51,14 @@ canvas.onmousemove = function position( event ){
     ctx.stroke();
     ctx.fill();
     count++;
-    // display(); //calling display functin again incase of resizing of browser.
+}
+function art(){
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(39, 61, 80)";
+    ctx.fillStyle = "grey";
+    ctx.moveTo( 0, canvas.height / 2 );
+    ctx.bezierCurveTo( 900 , 0, 400 , 100, 0, 0 );
+    ctx.stroke();
+    ctx.fill();
 }
 display();

@@ -9,7 +9,6 @@
     position: absolute;
 }
 #topHeading{
-    /* bottom: 100%; */
     position: absolute;
     margin: 30px 5px 0px 5px;
     color: white;
@@ -22,12 +21,16 @@
     margin-top: 0px;
     margin-left: 100px;   
 }
+button{
+    position: relative;
+    bottom: 100px;
+}
 .midContainerHome{
     border-radius: 20%;
     padding-right: 0px;
     padding-left: 0px;
-    width: 33%;
-    top: 300px;
+    width: 30%;
+    top: 500px;
     height: 150px;
     position: relative;
     left: 15%;
