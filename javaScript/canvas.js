@@ -1,12 +1,19 @@
 let canvas = document.getElementById( "canvas" );
 let ctx = canvas.getContext( "2d" );
 
+//intializing array of x and y.
 let x = [], y = [];
+
+//decalring and intializing global varaiables.
 let count = 0, localCount = 0;
 
+//sertting interval for 20 miliseconds.
 setInterval( clear, 20 );
 
+
+//clear function
 function clear(){
+    //calling art functin.
     art();
     for(let i = localCount + 1; i < count; i++){
         ctx.beginPath();
@@ -26,6 +33,7 @@ function clear(){
     }
 }
 
+
 //canvas background.
 function display(){
     canvas.height = window.innerHeight + scrollY;
@@ -33,10 +41,14 @@ function display(){
     ctx.fillStyle = "rgb(39, 61, 80)" ;
     ctx.fillRect( 0, 0, canvas.width, canvas.height);
     document.getElementById( "btn" ).style.left = canvas.width - 100;
+    //calling art functin.
     art();
 }
 
+
+//om mouse over function.
 canvas.onmousemove = function position( event ){
+    //calling art functin.
     art();
     x[ count ] = event.clientX, y[ count ] = event.clientY;
     ctx.fillStyle = "grey";
@@ -52,6 +64,9 @@ canvas.onmousemove = function position( event ){
     ctx.fill();
     count++;
 }
+
+
+//art function
 function art(){
     ctx.beginPath();
     ctx.strokeStyle = "rgb(39, 61, 80)";
@@ -61,4 +76,6 @@ function art(){
     ctx.stroke();
     ctx.fill();
 }
+
+//calling display function.
 display();

@@ -11,7 +11,7 @@
             <div id="topHeading">
                 <h1>PakStore</h1>
                 <p>All your shopping needs are here!</p>
-                <button class="btn btn-primary m-2" id = "btn">log In</button>
+                <button class="btn btn-primary m-2" id="btn" onclick="modelBox()">log In</button>
             </div>
                 <!-- <h2>Order Online Now!</h2> -->
             <canvas id="canvas"></canvas>
@@ -39,6 +39,15 @@
                 </div>
             </div>
         </div>
+        <div class="modelBox animate" id="modelBox">
+            <div class="modelBoxContent animate" id="modelContent">
+                <img src="../images/smartPhone.jpg" alt="Smart Phone" id = "slide0">
+                <img src="../images/tablet.jpg" alt="Tablet" id = "slide1">
+                <img src="../images/laptop.jpg" alt="Laptop" id = "slide2">
+            </div>
+        </div>
     <script src="../javaScript/canvas.js"></script>
+    <script src="../javaScript/login.js"></script>
+    <script src="../javaScript/slideShow.js"></script>
     </body>
 </html>

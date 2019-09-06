@@ -1,12 +1,18 @@
-//global  variable.
-let itemPurchase =  JSON.parse(localStorage.getItem('itemsArray'));
+//global  variable.  
+let oldArray = JSON.parse(localStorage.getItem('itemsArray'));
 let eachItemCountArray = [];
-if( itemPurchase[0] == null )
+let itemPurchase;
+if( oldArray != undefined )
+    itemPurchase = oldArray;
+else{
+    itemPurchase = [ {  } ];
     itemPurchase.shift();
+}
+console.log ( itemPurchase );
 
+if( itemPurchase != "[]" )
+    counter();
 
-//calling counter function.
-counter();
 
 //add to cart function
 function addToCart(item, price, id, imageName){
