@@ -2,13 +2,15 @@
 let oldArray = JSON.parse(localStorage.getItem('itemsArray'));
 let eachItemCountArray = [];
 let itemPurchase;
+
+
+
 if( oldArray != undefined )
     itemPurchase = oldArray;
 else{
     itemPurchase = [ {  } ];
     itemPurchase.shift();
 }
-console.log ( itemPurchase );
 
 if( itemPurchase != "[]" )
     counter();
@@ -122,6 +124,7 @@ function showModelBox(){
     }    
     
     sight = document.getElementById("modelContent").innerHTML += '<p>' + 'Total Price = ' + totalPrice.toLocaleString() + ' Rs' +'</p>' + "<br>";
+    sight = document.getElementById("modelContent").innerHTML += "<button class = 'btn btn-primary'>Shop Now!</button>";
 }
 
 

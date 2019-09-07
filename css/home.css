@@ -25,43 +25,38 @@ button{
     position: relative;
     bottom: 100px;
 }
-.midContainerHome{
-    border-radius: 20%;
+.footer{
     padding-right: 0px;
     padding-left: 0px;
     width: 30%;
-    top: 500px;
-    height: 150px;
+    height: 200px;
+    margin-left: 2.33%;
     position: relative;
-    left: 15%;
-}.midContainerContentHome{
-    border-radius: 20%;
-    box-shadow: 0 4px 4px 0 rgb(39, 61, 80);
+}.footerContent{
     width: 100%;
     height: 100%;
     color: white;
-    position: absolute;
+    position: relative;
     text-align: center;
 }
-.midContainerContentHome > a > img{
-    border-radius: 20%;
+.footerContent > a > img{
     height: 100%;
     width: 100%;
 }
-.midContainerContentHome > a > p{
+.footerContent > a > p{
     color: white;
     font-size: 15px;
     margin-left: 80px;
     margin-right: 80px;
     font-family: serif;
 }
-.midContainerContentHome > a > h5{
+.footerContent > a > h5{
     color: white;
 }
-.midContainerContentHome > a{
+.footerContent > a{
     text-decoration: none;
 }
-.midContainerHome:hover{
+.footer:hover{
     transform: scale(1.3); 
 }
 .row{
@@ -81,7 +76,7 @@ button{
 .modelBoxContent{
     margin: auto;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.8;
     width: 90%;
     overflow: scroll;
     height: 60%;
@@ -89,14 +84,53 @@ button{
 }
 .modelBoxContent > img{
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
-.modelBoxContent > p{
+.login{
     border: 1px solid black;
+    border-radius: 5%;
     padding: 20px;
     margin: 20px;
     font-size: 25px;
-}
-.modelBoxContent > h1{
     text-align: center;
 }
+.login > form > input {
+    background-color: #EAE7E7;
+    border: 1px solid #cdcccc;
+    border-radius: 5px;
+    padding-left: 20px;
+    outline: none;                
+    color: #909090;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+ }
+.login > form > button{
+     background-color: #FAE8A3;
+     color: #7E5935;
+     height: 40px;
+     width: 150px;
+     outline:  none;
+     border-radius: 50px;
+     float: right;
+     top: 20px;
+     position: relative;
+     margin-top: 10px;
+     border: 1px solid #7E5935;
+     font-weight: bold;
+ }
+ .login > form > p{
+    float: left;
+}
+.login > form > p > a{
+    color: black;
+}
+.row{
+    position: relative;
+}
+
+.midContent{
+    width: 700px;
+    font-variant: small-caps;
+    font-family: comic;
+}   

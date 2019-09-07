@@ -32,7 +32,6 @@ body{
     text-align: center;
 }
 .midContainerContent >  img{
-    border-radius: 5%;
     height: 50%;
     width: 100%;
 }
@@ -97,4 +96,9 @@ body{
 }
 .modelBoxContent > h1{
     text-align: center;
+}
+.modelBoxContent > button{
+    left: 40%;
+    position: relative;
+    margin-bottom: 20px;
 }

@@ -12,40 +12,64 @@
                 <h1>PakStore</h1>
                 <p>All your shopping needs are here!</p>
                 <button class="btn btn-primary m-2" id="btn" onclick="modelBox()">log In</button>
+                <div class="midContent">
+                    <h1>hot summer discouts are ranning grab your discount now !</h1>
+                    <p>New Arrivals are here!</p>
+                </div>
             </div>
-                <!-- <h2>Order Online Now!</h2> -->
             <canvas id="canvas"></canvas>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-3 midContainerHome" id="hideShowLaptopIcon">
-                <div class="midContainerContentHome">
-                    <a href="./laptop.html">
-                    <img src="../images/laptop.jpg" alt="Laptop">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-3 midContainerHome" id="hideShowMobileICon">
-                <div class="midContainerContentHome">
-                    <a href="./tablet.html">
-                    <img src="../images/tablet.jpg" alt="Tablet">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-3 midContainerHome" id="hideShowTabletIcon">
-                <div class="midContainerContentHome">
-                    <a href="./mobile.html">
-                    <img src="../images/smartPhone.jpg" alt="Smart Phone">
-                    </a>
-                </div>
-            </div>
         </div>
         <div class="modelBox animate" id="modelBox">
             <div class="modelBoxContent animate" id="modelContent">
                 <img src="../images/smartPhone.jpg" alt="Smart Phone" id = "slide0">
                 <img src="../images/tablet.jpg" alt="Tablet" id = "slide1">
                 <img src="../images/laptop.jpg" alt="Laptop" id = "slide2">
+                <div class="login" id = "logIn">
+                    <h1>Log in</h1>
+                    <form>
+                        <input type="text" name="username" placeholder="Username"><br />
+                        <input type="password" name="password" placeholder="Password"><br />
+                        <button>Log in</button></br>
+                        <p><a href="javascript: void(0)" onClick="signInUp()">create Account</a></p>
+                    </form>
+                </div>
+                <div class="login" id = "signUp" style="display: none;">
+                    <h1>Create Account</h1>
+                    <form>
+                        <input type="text" name="first name" placeholder="first Name"><br />
+                        <input type="text" name="last name" placeholder="Last Name"><br />
+                        <input type="email" name="email" placeholder="Email"><br />
+                        <input type="text" name="username" placeholder="Username"><br />
+                        <input type="password" name="password" placeholder="Password"><br />
+                        <button>Sign up</button></br>
+                        <p><a  href="javascript: void(0)" onClick="signInUp()">login</a></p>
+                    </form>
+                </div>
             </div>
         </div>
+        <div class="row" id = "row">
+                <div class="footer">
+                    <div class="footerContent" id= "laptop">
+                        <a href="./laptop.html">
+                        <img src="../images/laptop.jpg" alt="Laptop">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footerContent">
+                        <a href="./tablet.html">
+                        <img src="../images/tablet.jpg" alt="Tablet">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footerContent">
+                        <a href="./mobile.html">
+                        <img src="../images/smartPhone.jpg" alt="Smart Phone">
+                        </a>
+                    </div>
+                </div>
+            </div>
     <script src="../javaScript/canvas.js"></script>
     <script src="../javaScript/login.js"></script>
     <script src="../javaScript/slideShow.js"></script>
