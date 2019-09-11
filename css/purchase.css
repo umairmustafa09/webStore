@@ -102,3 +102,6 @@ body{
     position: relative;
     margin-bottom: 20px;
 }
+nav > button:focus{
+    outline: none;
+}
